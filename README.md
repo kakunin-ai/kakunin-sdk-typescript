@@ -152,3 +152,7 @@ Thanks to everyone who contributes ([emoji key](https://allcontributors.org/docs
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 Contributions of any kind are welcome — this project follows the [all-contributors](https://allcontributors.org) spec.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
