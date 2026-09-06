@@ -28,6 +28,7 @@
   ],
   "scripts": {
     "build": "tsup src/index.ts src/verify/index.ts src/verify/supabase.ts --format cjs,esm --dts --clean",
+    "lint": "eslint src",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
@@ -60,8 +61,10 @@
   "devDependencies": {
     "@supabase/supabase-js": "^2.0.0",
     "@types/node": "^26.1.0",
+    "eslint": "^10.10.0",
     "tsup": "^8.0.0",
     "typescript": "^6.0.0",
+    "typescript-eslint": "^8.69.0",
     "vitest": "^4.1.10"
   },
   "peerDependencies": {

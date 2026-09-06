@@ -14,6 +14,7 @@ Thanks for your interest in improving the Kakunin SDK.
 npm ci          # or: pip install -e ".[dev]" for the Python SDK
 npm test        # or: pytest tests/ -v
 npm run typecheck  # or: mypy kakunin/
+npm run lint
 ```
 
 ## Pull requests
@@ -21,7 +22,7 @@ npm run typecheck  # or: mypy kakunin/
 1. Open an issue first for anything beyond a small fix — API surface changes need discussion.
 2. Add or update tests for any behavior change.
 3. Keep the public API backward compatible; breaking changes require a major-version discussion.
-4. CI must be green: build, tests, type-check, dependency audit.
+4. CI must be green: build, tests, type-check, lint, dependency audit.
 
 ## What we're looking for
 
