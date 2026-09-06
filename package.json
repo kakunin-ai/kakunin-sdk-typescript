@@ -28,6 +28,7 @@
   ],
   "scripts": {
     "build": "tsup src/index.ts src/verify/index.ts src/verify/supabase.ts --format cjs,esm --dts --clean",
+    "test:cjs": "node tests/cjs-smoke.cjs",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",

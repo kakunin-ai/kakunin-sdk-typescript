@@ -40,6 +40,17 @@ const verified = await kkn.verify.cert(cert.serial_number);
 console.log(verified.status); // "active" | "revoked" | "expired"
 ```
 
+### CommonJS
+
+The CommonJS build exposes the same API through `require`:
+
+```javascript
+const { Kakunin } = require('@kakunin/sdk');
+
+const kkn = new Kakunin({ apiKey: process.env.KAKUNIN_API_KEY });
+console.log(kkn.isSandbox());
+```
+
 ## Sandbox mode
 
 Use a `kak_test_...` key to hit the sandbox CA at no cost. Certificates are real X.509 but issued by a test root and have no regulatory validity.

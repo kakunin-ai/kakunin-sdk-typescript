@@ -32,5 +32,8 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: CommonJS smoke test
+        run: npm run test:cjs
+
       - name: Test
         run: npm test
