@@ -68,6 +68,15 @@ describe('Kakunin constructor', () => {
 // ── computeModelHash ──────────────────────────────────────────────────────────
 
 describe('Kakunin.computeModelHash', () => {
+  it('matches the SHA-256 known vector for string and byte inputs', async () => {
+    const expected = 'sha256:2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824';
+
+    await expect(Kakunin.computeModelHash('hello')).resolves.toBe(expected);
+    await expect(Kakunin.computeModelHash(new TextEncoder().encode('hello'))).resolves.toBe(
+      expected,
+    );
+  });
+
   it('returns sha256: prefixed hex string', async () => {
     const hash = await Kakunin.computeModelHash('test-model-v1.0');
     expect(hash).toMatch(/^sha256:[0-9a-f]{64}$/);
